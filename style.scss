@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'montserrat';
+  src: url('ArbFONTS-Montserrat-Arabic-Regular.ttf');
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #999999;
+  height: 300px;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+nav {
+  position: absolute;
+  top: 0;
+  padding: 20px 32px;
+  left: 0;
+  z-index: 9999;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+    padding: 20px 16px;
+  }
+  img {
+    height: 60px;
+    @media (max-width: 576px) {
+      height: 44px;
+    }
+  }
+  .btn {
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background: #03484d;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+}
+main {
+  width: 100%;
+  .hreo {
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 90%, 0% 60%);
+    @media (max-width: 576px) {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 95%, 0% 80%);
+    }
+    .img {
+      height: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(255 255 255 / 75%);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        margin: 0 auto;
+        width: min(100% - 32px, 600px);
+        h2 {
+          color: #03484d;
+          font-size: 32px;
+          text-align: center;
+          line-height: 1.5;
+          @media (max-width: 576px) {
+            font-size: 24px;
+          }
+        }
+        p {
+          font-size: 16px;
+          color: #03484d;
+          text-align: center;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  .about_report {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 40px;
+    gap: 40px;
+    @media (max-width: 576px) {
+      padding: 0px 16px 40px;
+    }
+    .section-title {
+      h3 {
+        color: #03484d;
+        font-size: 32px;
+        @media (max-width: 576px) {
+          font-size: 26px;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 18px;
+        color: #03484d;
+        line-height: 36px;
+        margin-bottom: 16px;
+        @media (max-width: 576px) {
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+  .download_report {
+    width: 100%;
+    background: #fafafa;
+    padding: 40px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    h2 {
+      color: #03484d;
+      font-size: 32px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: min(100% - 32px, 600px);
+      margin: 0 auto;
+      gap: 16px;
+      input,
+      select {
+        height: 56px;
+        padding: 8px;
+        background: none;
+        outline: none;
+        border: 1px solid #eee;
+        font-size: 14px;
+        transition: all .4s ease-in-out;
+        border-radius: 4px;
+        &:focus {
+          box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+        }
+      }
+      button {
+        height: 48px;
+        width: 120px;
+        color: #fff;
+        background: #03484d;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 160px;
+        align-self: flex-end;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+footer {
+  width: 100%;
+  padding: 40px 48px;
+  display: flex;
+  justify-content: center;
+  .logo_copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    a img {
+      height: 48px;
+    }
+    p {
+      font-size: 14px;
+      color: #03484d;
+    }
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    a{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #03484d;
+      svg{
+        height: 20px;
+      }
+    }
+  }
+}
