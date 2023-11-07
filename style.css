@@ -1,6 +1,6 @@
 @font-face {
   font-family: "montserrat";
-  src: url("ArbFONTS-Montserrat-Arabic-Regular.ttf");
+  src: url("webfonts/ArbFonts.com/ArbFONTS-Montserrat-Arabic-Regular.ttf");
 }
 * {
   padding: 0;
@@ -130,7 +130,7 @@ main .hreo .img .text p {
 main .about_report {
   display: flex;
   flex-direction: column;
-  padding: 0 40px 40px;
+  padding: 0 80px 40px;
   gap: 40px;
 }
 @media (max-width: 576px) {
@@ -187,7 +187,7 @@ main .download_report form {
 main .download_report form input,
 main .download_report form select {
   height: 56px;
-  padding: 8px;
+  padding: 8px 16px;
   background: none;
   outline: none;
   border: 1px solid #eee;
@@ -211,10 +211,152 @@ main .download_report form button {
   outline: none;
   border: none;
 }
+main .recent_updates {
+  padding: 60px 80px;
+}
+@media (max-width: 768px) {
+  main .recent_updates {
+    padding: 40px 16px;
+  }
+}
+main .recent_updates .head {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+main .recent_updates .head h2 {
+  color: #03484d;
+  font-size: 28px;
+}
+@media (max-width: 576px) {
+  main .recent_updates .head h2 {
+    font-size: 16px;
+  }
+}
+main .recent_updates .head button {
+  width: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #03484d;
+}
+main .recent_updates .head .filter {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  list-style: none;
+  display: none;
+}
+main .recent_updates .head .filter li {
+  padding: 12px 24px;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+main .recent_updates .head .filter li.active {
+  color: #edb478;
+}
+main .recent_updates .reports {
+  padding: 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 576px) {
+  main .recent_updates .reports {
+    flex-direction: column;
+  }
+}
+main .recent_updates .reports .report_container {
+  padding: 12px;
+  flex: 1;
+}
+main .recent_updates .reports .report_container .report {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+main .recent_updates .reports .report_container .report .img {
+  width: 100%;
+}
+main .recent_updates .reports .report_container .report .img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .recent_updates .reports .report_container .report .info {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+main .recent_updates .reports .report_container .report .info h5 {
+  color: #03484d;
+  font-size: 18px;
+}
+main .recent_updates .reports .report_container .report .info p {
+  color: #999999;
+  font-size: 12px;
+}
+main .recent_updates .reports .report_container .report .info a {
+  text-decoration: none;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  background: #03484d;
+  color: #edb478;
+  padding: 12px;
+  font-size: 14px;
+}
+main .recent_updates .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+main .recent_updates .pagination .arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .recent_updates .pagination .current {
+  width: 100px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  height: 42px;
+}
+main .recent_updates .pagination .current span {
+  color: #03484d;
+}
+main .recent_updates .pagination .current span:first-child {
+  color: #edb478;
+}
 
 footer {
   width: 100%;
   padding: 40px 48px;
+  border-top: 1px solid #777;
   display: flex;
   justify-content: center;
 }

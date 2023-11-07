@@ -7,6 +7,7 @@
     <title>Local Eye</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imgs/fav.svg" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome.min.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             </div>
         </section>
         <section class="download_report">
-            <h2>download report now</h2>
+            <h2>Download report now</h2>
             <form action="">
                 <input type="text" id="name" name="name" placeholder="Your Name">
                 <input type="email" id="email" name="email" placeholder="Business Mail">
@@ -66,6 +67,71 @@
                     Download
                 </button>
             </form>
+        </section>
+        <section class="recent_updates">
+            <div class="head">
+                <h2>Recent published reports</h2>
+                <button id="filterBtn">2022 <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+                <ul class="filter">
+                    <li><i class="fa-solid fa-eye"></i> 2023 - 1 Report</li>
+                    <li class="active"><i class="fa-solid fa-eye"></i> 2022 - 3 Report</li>
+                </ul>
+            </div>
+            <div class="reports">
+                <div class="report_container">
+                    <div class="report">
+                        <div class="img">
+                            <img src="imgs/1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>SDG Annual Report</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odio animi aliquid.</p>
+                            <a href="#">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="report_container">
+                    <div class="report">
+                        <div class="img">
+                            <img src="imgs/2.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>SDG Annual Report</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odio animi aliquid.</p>
+                            <a href="#">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="report_container">
+                    <div class="report">
+                        <div class="img">
+                            <img src="imgs/3.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>SDG Annual Report</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odio animi aliquid.</p>
+                            <a href="#">View Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </div>
+                <div class="current">
+                    <span>
+                        1
+                    </span>
+                    /
+                    <span>
+                        11
+                    </span>
+                </div>
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -121,8 +187,27 @@
             </div>
             <p>All Right Reserved 2023 © Local Eye</p>
         </div>
-
     </footer>
+    <script>
+        let filterBtn = document.getElementById("filterBtn");
+        let menu = document.querySelector(".filter");
+        filterBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (menu.style.display === "block") {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+        document.body.addEventListener("click", () => {
+            if (menu.style.display === "block") {
+                menu.style.display = 'none';
+            }
+        });
+        menu.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+    </script>
 </body>
 
 </html>
